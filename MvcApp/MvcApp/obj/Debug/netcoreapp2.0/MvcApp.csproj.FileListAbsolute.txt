@@ -1,0 +1,11 @@
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.deps.json
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.runtimeconfig.json
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.runtimeconfig.dev.json
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.dll
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\bin\Debug\netcoreapp2.0\MvcApp.pdb
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.csprojAssemblyReference.cache
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.csproj.CoreCompileInputs.cache
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.AssemblyInfoInputs.cache
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.AssemblyInfo.cs
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.dll
+C:\apps\Git Projects\PluralSight\MvcApp\MvcApp\obj\Debug\netcoreapp2.0\MvcApp.pdb
