@@ -18,6 +18,7 @@ namespace OdeToFood.Controllers
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
+            ViewBag.Location = "Chihuahua, Chih. México";
 
             return View();
         }

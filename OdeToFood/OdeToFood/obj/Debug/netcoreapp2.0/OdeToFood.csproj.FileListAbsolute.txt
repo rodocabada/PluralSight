@@ -9,3 +9,14 @@ C:\apps\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\Ode
 C:\apps\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.AssemblyInfo.cs
 C:\apps\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.dll
 C:\apps\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.pdb
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.deps.json
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.runtimeconfig.json
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.runtimeconfig.dev.json
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.dll
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\bin\Debug\netcoreapp2.0\OdeToFood.pdb
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.csprojAssemblyReference.cache
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.csproj.CoreCompileInputs.cache
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.AssemblyInfoInputs.cache
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.AssemblyInfo.cs
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.dll
+D:\Git Projects\PluralSight\OdeToFood\OdeToFood\obj\Debug\netcoreapp2.0\OdeToFood.pdb
