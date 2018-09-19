@@ -17,10 +17,11 @@ namespace OdeToFood.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-            ViewBag.Location = "Chihuahua, Chih. México";
+            var model = new AboutModel();
+            model.Name = "Rodolfo";
+            model.Location = "Chihuahua, Chih. México.";
 
-            return View();
+            return View(model);
         }
 
         public IActionResult Contact()
