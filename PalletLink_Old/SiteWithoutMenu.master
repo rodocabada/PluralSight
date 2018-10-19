@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SiteWithoutMenu.master.cs" Inherits="SiteSiteWithoutMenu" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Tooling Management System</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="img/icons/favicon/favicon.png" sizes="32x32" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.cerulean.css" rel="stylesheet" type="text/css" />
+    <link href="css/sb-admin2.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/menu.js" type="text/javascript"></script>
+    <script src="js/slimscroll.min.js" type="text/javascript"></script>
+    <meta http-equiv='cache-control' content='no-cache' />
+    <meta http-equiv='expires' content='0' />
+    <meta http-equiv='pragma' content='no-cache' />
+    <style type="text/css">
+        .dropdown > a {
+            color: #ccc !important;
+        }
+
+        #wrapper.toggled {
+            padding-left: 0;
+        }
+
+        .hidemenu {
+            display: none;
+        }
+
+        .modal-backdrop.in {
+            filter: alpha(opacity=50) !important;
+            opacity: .5 !important;
+        }
+
+        .style1 {
+            width: 126px;
+        }
+
+        hr {
+            background: #dd5600;
+            border-color: #dd5600;
+            border-width: 5px;
+        }
+
+        .noty {
+            position: absolute;
+            top: 7px;
+            right: 3px;
+            display: block;
+            background: #ff5b57;
+            line-height: 12px;
+            font-weight: 300;
+            padding: .3em .6em;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        function refresh() {
+            var btnRefresh = document.getElementById('btnRefresh');
+            btnRefresh.click();
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnablePageMethods="true">
+        </telerik:RadScriptManager>
+<%--        <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Skin="Metro">
+        </telerik:RadAjaxLoadingPanel>--%>
+        <%--<telerik:RadWindow ID="RadWindow1" Modal="true" Title="Telerik" Width="850px" Height="720px"
+            Skin="WebBlue" NavigateUrl="http://www.telerik.com" runat="server" OnClientClose="refresh">
+        </telerik:RadWindow>--%>
+        <%--<asp:Button ID="btnRefesh" runat="server" Text="Button" Style="display: none;" OnClick="btnRefresh_Click" />--%>
+        <div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        </nav>
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+    </form>
+</body>
+</html>

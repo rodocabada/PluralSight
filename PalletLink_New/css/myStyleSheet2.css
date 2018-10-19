@@ -1,0 +1,110 @@
+﻿/* ajax__tab_msngallery-theme theme */
+.ajax__tab_msngallery-theme .ajax__tab_header
+{
+	background: url(Images/Background/tab-line.jpg) repeat-x bottom;
+	font-size: 12px;
+	display: block;
+}
+.ajax__tab_msngallery-theme .ajax__tab_header .ajax__tab_outer
+{
+	padding: 1px 1px 0px 1px;
+	border-bottom: solid 2px #A8D4D9;
+	background-color: #EAEAEA;
+	border-style: solid;
+	border-width: 1px 1px 2px 1px;
+	border-color: #CCCCCC #CCCCCC #0081C7 #CCCCCC;
+}
+.ajax__tab_msngallery-theme .ajax__tab_header .ajax__tab_tab
+{
+	padding: 6px 10px 6px 10px;
+	color: #000000;
+	width: 80px;
+	display: block;
+	text-align: center;
+}
+.ajax__tab_msngallery-theme .ajax__tab_header .ajax__tab_tab div
+{
+	background-position: top;
+	font-family: Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	white-space: nowrap;
+	line-height: 145%;
+	font-size: 92%;	
+}
+.ajax__tab_msngallery-theme .ajax__tab_active .ajax__tab_outer
+{
+	border-style: solid;
+	border-width: 2px;
+	border-color: #0081C7 #0081C7 #ffffff #0081C7;
+	padding: 0px 0px 0px 0px;
+	background-color: #ffffff;
+	font-weight: bold;
+}
+.ajax__tab_msngallery-theme .ajax__tab_body
+{
+	border-width: 2px;
+	border-color: #0081C7;
+	border-style: solid;
+	font-family: Tahoma, Verdana, Helvetica, Helvetica-Narrow, sans-serif;
+	font-size: 11px;
+	padding: 8px;
+	background-color: #ffffff;
+	border-top-width: 0;
+}
+
+/*************************************
+**ajax__tab_technorati-theme theme ***
+*************************************/
+/* ajax__tab_technorati-theme theme */
+.ajax__tab_technorati-theme .ajax__tab_header 
+{
+    font-family:"Helvetica Neue", Arial, Sans-Serif;
+    background:url('../Images/Background/tab-line2.png') repeat-x bottom;
+    font-size:14px;
+    display:block;
+    border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: #FFFFFF;
+}
+.ajax__tab_technorati-theme .ajax__tab_header .ajax__tab_outer
+{
+	background: url( '../Images/Background/tab.png' ) no-repeat left top;
+	border-color: #222;
+	color: #222;
+	padding-left: 10px;
+	margin-right: 3px;
+}
+.ajax__tab_technorati-theme .ajax__tab_header .ajax__tab_inner
+{
+	background: url( '../Images/Background/tab.png' ) no-repeat right top;
+	border-color: #666;
+	color: #666;
+	padding: 3px 10px 2px 0px;
+}
+.ajax__tab_technorati-theme .ajax__tab_hover .ajax__tab_inner
+{
+	color: #000000;
+	font-weight: bold;
+	text-decoration: underline;
+}
+.ajax__tab_technorati-theme .ajax__tab_active .ajax__tab_outer
+{
+	background: url('../Images/Background/tab.png') no-repeat 0pt -40px;
+	border-bottom-color: #ffffff;
+}
+.ajax__tab_technorati-theme .ajax__tab_active .ajax__tab_inner 
+{
+    background:url('../Images/Background/tab.png') no-repeat right -40px;
+    color:#000000;
+    border-color:#333;
+	font-weight: bold;
+}
+.ajax__tab_technorati-theme .ajax__tab_body 
+{
+	font-family: Tahoma, Verdana, Helvetica, Helvetica-Narrow, sans-serif;
+	font-size: 11px;
+    padding:5px;
+    background-color:#ffffff;
+    border:solid 1px #d7d7d7;
+    border-top-width:0;
+}

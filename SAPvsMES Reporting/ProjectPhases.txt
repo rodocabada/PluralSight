@@ -1,0 +1,23 @@
+Definición de fases del proyecto.
+FASE 1
+1.- Probar a Tesla con la implementación que se tiene para Termofisher, una vez cotejado en la nueva
+	implementación se deprecara la anterior.
+2.- Hay que definir a que hrs estara corriendo el Job que alimenta la información para el reporte,
+	es crucial encontrar una sincronia con el proceso del Backflush automatico (cualquier duda con
+	Luis Castillo). El escenario propuesto seria partir el job para que exactamente a la misma hora
+	corre el proceso del backflush SAPvsMES alimente la información de MES y cierto tiempo después SAPvsMES
+	alimente la información de SAP.
+2.- A la par del paso 1 se requiere parametrizar el reporte para poder sacarlo por cualquier cliente
+	aunque de momento la implementación se hara con John Deere y "definir".
+3.- Se requiere realizar UAT con dichos clientes antes mencionados.
+
+FASE 2
+1.- Se requiere una versión dos de la solución para permitir la limpieza de MES (algo que actualmente realizar
+	IT manualmente después de que Materiales revisa SAPvsMES y se apoya con IT). De este ultimo requerimiento
+	se requiere mas detalle para ver dicho proceso tanto con IT como el escaneo y conteo que hace Materiales.
+2.- Se implementara la solución versión 2 en los clientes que tengan la versión 1 corriendo y probada hasta este punto.
+3.- Realizar UAT con dichos clientes.
+
+FASE 3
+1.- Implementar la versión 2 de la solución en los clientes restantes.
+2.- Realizar UAT con dicho resto de clientes.

@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Hana_GetMovements">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hana_GetMovementsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hana_GetMovementsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hana_GetReportTest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Query" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hana_GetReportTestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hana_GetReportTestResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Movements_GetReportHeader">
+        <s:complexType />
+      </s:element>
+      <s:element name="Movements_GetReportHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Movements_GetReportHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Movements_GetReportDetails">
+        <s:complexType />
+      </s:element>
+      <s:element name="Movements_GetReportDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Movements_GetReportDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Movements_GetReportTotalCost">
+        <s:complexType />
+      </s:element>
+      <s:element name="Movements_GetReportTotalCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Movements_GetReportTotalCostResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mails_ListDistribution">
+        <s:complexType />
+      </s:element>
+      <s:element name="Mails_ListDistributionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mails_ListDistributionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Hana_LastUpdateGRNs">
+        <s:complexType />
+      </s:element>
+      <s:element name="Hana_LastUpdateGRNsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Hana_LastUpdateGRNsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Scrap_GetMailList">
+        <s:complexType />
+      </s:element>
+      <s:element name="Scrap_GetMailListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Scrap_GetMailListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Scrap_GetReportByMaterialType">
+        <s:complexType />
+      </s:element>
+      <s:element name="Scrap_GetReportByMaterialTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Scrap_GetReportByMaterialTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Scrap_GetReportTotalsByMaterialType">
+        <s:complexType />
+      </s:element>
+      <s:element name="Scrap_GetReportTotalsByMaterialTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Scrap_GetReportTotalsByMaterialTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Scrap_GetReportByMaterialGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="Scrap_GetReportByMaterialGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Scrap_GetReportByMaterialGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Scrap_AdjustGetReportByMaterialGroup">
+        <s:complexType />
+      </s:element>
+      <s:element name="Scrap_AdjustGetReportByMaterialGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Scrap_AdjustGetReportByMaterialGroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Scrap_AdjustGetReportTotals">
+        <s:complexType />
+      </s:element>
+      <s:element name="Scrap_AdjustGetReportTotalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Scrap_AdjustGetReportTotalsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Scrap_GetReportTotals">
+        <s:complexType />
+      </s:element>
+      <s:element name="Scrap_GetReportTotalsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Scrap_GetReportTotalsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PNToAdjustByRecount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PNToAdjustByRecountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_PNToAdjustByRecountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_NoAdjusWhenRequired">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_NoAdjusWhenRequiredResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_NoAdjusWhenRequiredResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PNCustomerToAdjuts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PNCustomerToAdjutsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_PNCustomerToAdjutsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PNToCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PNToCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_PNToCountResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_Mails_ListDistribution">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Level" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_Mails_ListDistributionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_Mails_ListDistributionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_Mails_GetHeader">
+        <s:complexType />
+      </s:element>
+      <s:element name="CycleCount_Mails_GetHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_Mails_GetHeaderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_Mails_GetFooter">
+        <s:complexType />
+      </s:element>
+      <s:element name="CycleCount_Mails_GetFooterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_Mails_GetFooterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_GetRecountPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LevelEscalation" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_GetRecountPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_PeriodsNotifications_GetRecountPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_GetAnalysisPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LevelEscalation" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_GetAnalysisPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_PeriodsNotifications_GetAnalysisPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_GetAdjustedPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LevelEscalation" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_GetAdjustedPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CycleCount_PeriodsNotifications_GetAdjustedPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_UpdateTotalPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_UpdateTotalPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CycleCount_PeriodsNotifications_UpdateTotalPeriodResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PKCustomer" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriodResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidationMPN_GetMailList">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidationMPN_GetMailListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidationMPN_GetMailListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidationMPN_GetReportGrnNoValidated">
+        <s:complexType />
+      </s:element>
+      <s:element name="ValidationMPN_GetReportGrnNoValidatedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidationMPN_GetReportGrnNoValidatedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Hana_GetMovementsSoapIn">
+    <wsdl:part name="parameters" element="tns:Hana_GetMovements" />
+  </wsdl:message>
+  <wsdl:message name="Hana_GetMovementsSoapOut">
+    <wsdl:part name="parameters" element="tns:Hana_GetMovementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Hana_GetReportTestSoapIn">
+    <wsdl:part name="parameters" element="tns:Hana_GetReportTest" />
+  </wsdl:message>
+  <wsdl:message name="Hana_GetReportTestSoapOut">
+    <wsdl:part name="parameters" element="tns:Hana_GetReportTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="Movements_GetReportHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:Movements_GetReportHeader" />
+  </wsdl:message>
+  <wsdl:message name="Movements_GetReportHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:Movements_GetReportHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Movements_GetReportDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:Movements_GetReportDetails" />
+  </wsdl:message>
+  <wsdl:message name="Movements_GetReportDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:Movements_GetReportDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Movements_GetReportTotalCostSoapIn">
+    <wsdl:part name="parameters" element="tns:Movements_GetReportTotalCost" />
+  </wsdl:message>
+  <wsdl:message name="Movements_GetReportTotalCostSoapOut">
+    <wsdl:part name="parameters" element="tns:Movements_GetReportTotalCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mails_ListDistributionSoapIn">
+    <wsdl:part name="parameters" element="tns:Mails_ListDistribution" />
+  </wsdl:message>
+  <wsdl:message name="Mails_ListDistributionSoapOut">
+    <wsdl:part name="parameters" element="tns:Mails_ListDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Hana_LastUpdateGRNsSoapIn">
+    <wsdl:part name="parameters" element="tns:Hana_LastUpdateGRNs" />
+  </wsdl:message>
+  <wsdl:message name="Hana_LastUpdateGRNsSoapOut">
+    <wsdl:part name="parameters" element="tns:Hana_LastUpdateGRNsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetMailListSoapIn">
+    <wsdl:part name="parameters" element="tns:Scrap_GetMailList" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetMailListSoapOut">
+    <wsdl:part name="parameters" element="tns:Scrap_GetMailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportByMaterialTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportByMaterialType" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportByMaterialTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportByMaterialTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportTotalsByMaterialTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportTotalsByMaterialType" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportTotalsByMaterialTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportTotalsByMaterialTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportByMaterialGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportByMaterialGroup" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportByMaterialGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportByMaterialGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_AdjustGetReportByMaterialGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:Scrap_AdjustGetReportByMaterialGroup" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_AdjustGetReportByMaterialGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:Scrap_AdjustGetReportByMaterialGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_AdjustGetReportTotalsSoapIn">
+    <wsdl:part name="parameters" element="tns:Scrap_AdjustGetReportTotals" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_AdjustGetReportTotalsSoapOut">
+    <wsdl:part name="parameters" element="tns:Scrap_AdjustGetReportTotalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportTotalsSoapIn">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportTotals" />
+  </wsdl:message>
+  <wsdl:message name="Scrap_GetReportTotalsSoapOut">
+    <wsdl:part name="parameters" element="tns:Scrap_GetReportTotalsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PNToAdjustByRecountSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PNToAdjustByRecount" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PNToAdjustByRecountSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PNToAdjustByRecountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_NoAdjusWhenRequiredSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_NoAdjusWhenRequired" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_NoAdjusWhenRequiredSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_NoAdjusWhenRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PNCustomerToAdjutsSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PNCustomerToAdjuts" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PNCustomerToAdjutsSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PNCustomerToAdjutsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PNToCountSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PNToCount" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PNToCountSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PNToCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_Mails_ListDistributionSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_Mails_ListDistribution" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_Mails_ListDistributionSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_Mails_ListDistributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_Mails_GetHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_Mails_GetHeader" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_Mails_GetHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_Mails_GetHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_Mails_GetFooterSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_Mails_GetFooter" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_Mails_GetFooterSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_Mails_GetFooterResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_GetRecountPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_GetRecountPeriod" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_GetRecountPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_GetRecountPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_GetAnalysisPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_GetAnalysisPeriod" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_GetAnalysisPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_GetAnalysisPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_GetAdjustedPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_GetAdjustedPeriod" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_GetAdjustedPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_GetAdjustedPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_UpdateTotalPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_UpdateTotalPeriod" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_UpdateTotalPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_UpdateTotalPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_UpdateStatusPNPeriod" />
+  </wsdl:message>
+  <wsdl:message name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:CycleCount_PeriodsNotifications_UpdateStatusPNPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidationMPN_GetMailListSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidationMPN_GetMailList" />
+  </wsdl:message>
+  <wsdl:message name="ValidationMPN_GetMailListSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidationMPN_GetMailListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidationMPN_GetReportGrnNoValidatedSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidationMPN_GetReportGrnNoValidated" />
+  </wsdl:message>
+  <wsdl:message name="ValidationMPN_GetReportGrnNoValidatedSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidationMPN_GetReportGrnNoValidatedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsReportMovementsSoap">
+    <wsdl:operation name="Hana_GetMovements">
+      <wsdl:input message="tns:Hana_GetMovementsSoapIn" />
+      <wsdl:output message="tns:Hana_GetMovementsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hana_GetReportTest">
+      <wsdl:input message="tns:Hana_GetReportTestSoapIn" />
+      <wsdl:output message="tns:Hana_GetReportTestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportHeader">
+      <wsdl:input message="tns:Movements_GetReportHeaderSoapIn" />
+      <wsdl:output message="tns:Movements_GetReportHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportDetails">
+      <wsdl:input message="tns:Movements_GetReportDetailsSoapIn" />
+      <wsdl:output message="tns:Movements_GetReportDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportTotalCost">
+      <wsdl:input message="tns:Movements_GetReportTotalCostSoapIn" />
+      <wsdl:output message="tns:Movements_GetReportTotalCostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mails_ListDistribution">
+      <wsdl:input message="tns:Mails_ListDistributionSoapIn" />
+      <wsdl:output message="tns:Mails_ListDistributionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Hana_LastUpdateGRNs">
+      <wsdl:input message="tns:Hana_LastUpdateGRNsSoapIn" />
+      <wsdl:output message="tns:Hana_LastUpdateGRNsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetMailList">
+      <wsdl:input message="tns:Scrap_GetMailListSoapIn" />
+      <wsdl:output message="tns:Scrap_GetMailListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportByMaterialType">
+      <wsdl:input message="tns:Scrap_GetReportByMaterialTypeSoapIn" />
+      <wsdl:output message="tns:Scrap_GetReportByMaterialTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportTotalsByMaterialType">
+      <wsdl:input message="tns:Scrap_GetReportTotalsByMaterialTypeSoapIn" />
+      <wsdl:output message="tns:Scrap_GetReportTotalsByMaterialTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportByMaterialGroup">
+      <wsdl:input message="tns:Scrap_GetReportByMaterialGroupSoapIn" />
+      <wsdl:output message="tns:Scrap_GetReportByMaterialGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_AdjustGetReportByMaterialGroup">
+      <wsdl:input message="tns:Scrap_AdjustGetReportByMaterialGroupSoapIn" />
+      <wsdl:output message="tns:Scrap_AdjustGetReportByMaterialGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_AdjustGetReportTotals">
+      <wsdl:input message="tns:Scrap_AdjustGetReportTotalsSoapIn" />
+      <wsdl:output message="tns:Scrap_AdjustGetReportTotalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportTotals">
+      <wsdl:input message="tns:Scrap_GetReportTotalsSoapIn" />
+      <wsdl:output message="tns:Scrap_GetReportTotalsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNToAdjustByRecount">
+      <wsdl:input message="tns:CycleCount_PNToAdjustByRecountSoapIn" />
+      <wsdl:output message="tns:CycleCount_PNToAdjustByRecountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_NoAdjusWhenRequired">
+      <wsdl:input message="tns:CycleCount_NoAdjusWhenRequiredSoapIn" />
+      <wsdl:output message="tns:CycleCount_NoAdjusWhenRequiredSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNCustomerToAdjuts">
+      <wsdl:input message="tns:CycleCount_PNCustomerToAdjutsSoapIn" />
+      <wsdl:output message="tns:CycleCount_PNCustomerToAdjutsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNToCount">
+      <wsdl:input message="tns:CycleCount_PNToCountSoapIn" />
+      <wsdl:output message="tns:CycleCount_PNToCountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_ListDistribution">
+      <wsdl:input message="tns:CycleCount_Mails_ListDistributionSoapIn" />
+      <wsdl:output message="tns:CycleCount_Mails_ListDistributionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_GetHeader">
+      <wsdl:input message="tns:CycleCount_Mails_GetHeaderSoapIn" />
+      <wsdl:output message="tns:CycleCount_Mails_GetHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_GetFooter">
+      <wsdl:input message="tns:CycleCount_Mails_GetFooterSoapIn" />
+      <wsdl:output message="tns:CycleCount_Mails_GetFooterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetRecountPeriod">
+      <wsdl:input message="tns:CycleCount_PeriodsNotifications_GetRecountPeriodSoapIn" />
+      <wsdl:output message="tns:CycleCount_PeriodsNotifications_GetRecountPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetAnalysisPeriod">
+      <wsdl:input message="tns:CycleCount_PeriodsNotifications_GetAnalysisPeriodSoapIn" />
+      <wsdl:output message="tns:CycleCount_PeriodsNotifications_GetAnalysisPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetAdjustedPeriod">
+      <wsdl:input message="tns:CycleCount_PeriodsNotifications_GetAdjustedPeriodSoapIn" />
+      <wsdl:output message="tns:CycleCount_PeriodsNotifications_GetAdjustedPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_UpdateTotalPeriod">
+      <wsdl:input message="tns:CycleCount_PeriodsNotifications_UpdateTotalPeriodSoapIn" />
+      <wsdl:output message="tns:CycleCount_PeriodsNotifications_UpdateTotalPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriod">
+      <wsdl:input message="tns:CycleCount_PeriodsNotifications_UpdateStatusPNPeriodSoapIn" />
+      <wsdl:output message="tns:CycleCount_PeriodsNotifications_UpdateStatusPNPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidationMPN_GetMailList">
+      <wsdl:input message="tns:ValidationMPN_GetMailListSoapIn" />
+      <wsdl:output message="tns:ValidationMPN_GetMailListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidationMPN_GetReportGrnNoValidated">
+      <wsdl:input message="tns:ValidationMPN_GetReportGrnNoValidatedSoapIn" />
+      <wsdl:output message="tns:ValidationMPN_GetReportGrnNoValidatedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsReportMovementsSoap" type="tns:wsReportMovementsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Hana_GetMovements">
+      <soap:operation soapAction="http://tempuri.org/Hana_GetMovements" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hana_GetReportTest">
+      <soap:operation soapAction="http://tempuri.org/Hana_GetReportTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportHeader">
+      <soap:operation soapAction="http://tempuri.org/Movements_GetReportHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportDetails">
+      <soap:operation soapAction="http://tempuri.org/Movements_GetReportDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportTotalCost">
+      <soap:operation soapAction="http://tempuri.org/Movements_GetReportTotalCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mails_ListDistribution">
+      <soap:operation soapAction="http://tempuri.org/Mails_ListDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hana_LastUpdateGRNs">
+      <soap:operation soapAction="http://tempuri.org/Hana_LastUpdateGRNs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetMailList">
+      <soap:operation soapAction="http://tempuri.org/Scrap_GetMailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportByMaterialType">
+      <soap:operation soapAction="http://tempuri.org/Scrap_GetReportByMaterialType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportTotalsByMaterialType">
+      <soap:operation soapAction="http://tempuri.org/Scrap_GetReportTotalsByMaterialType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportByMaterialGroup">
+      <soap:operation soapAction="http://tempuri.org/Scrap_GetReportByMaterialGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_AdjustGetReportByMaterialGroup">
+      <soap:operation soapAction="http://tempuri.org/Scrap_AdjustGetReportByMaterialGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_AdjustGetReportTotals">
+      <soap:operation soapAction="http://tempuri.org/Scrap_AdjustGetReportTotals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportTotals">
+      <soap:operation soapAction="http://tempuri.org/Scrap_GetReportTotals" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNToAdjustByRecount">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PNToAdjustByRecount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_NoAdjusWhenRequired">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_NoAdjusWhenRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNCustomerToAdjuts">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PNCustomerToAdjuts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNToCount">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PNToCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_ListDistribution">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_Mails_ListDistribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_GetHeader">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_Mails_GetHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_GetFooter">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_Mails_GetFooter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetRecountPeriod">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_GetRecountPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetAnalysisPeriod">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_GetAnalysisPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetAdjustedPeriod">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_GetAdjustedPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_UpdateTotalPeriod">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_UpdateTotalPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriod">
+      <soap:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_UpdateStatusPNPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationMPN_GetMailList">
+      <soap:operation soapAction="http://tempuri.org/ValidationMPN_GetMailList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationMPN_GetReportGrnNoValidated">
+      <soap:operation soapAction="http://tempuri.org/ValidationMPN_GetReportGrnNoValidated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsReportMovementsSoap12" type="tns:wsReportMovementsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Hana_GetMovements">
+      <soap12:operation soapAction="http://tempuri.org/Hana_GetMovements" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hana_GetReportTest">
+      <soap12:operation soapAction="http://tempuri.org/Hana_GetReportTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportHeader">
+      <soap12:operation soapAction="http://tempuri.org/Movements_GetReportHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportDetails">
+      <soap12:operation soapAction="http://tempuri.org/Movements_GetReportDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Movements_GetReportTotalCost">
+      <soap12:operation soapAction="http://tempuri.org/Movements_GetReportTotalCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mails_ListDistribution">
+      <soap12:operation soapAction="http://tempuri.org/Mails_ListDistribution" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Hana_LastUpdateGRNs">
+      <soap12:operation soapAction="http://tempuri.org/Hana_LastUpdateGRNs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetMailList">
+      <soap12:operation soapAction="http://tempuri.org/Scrap_GetMailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportByMaterialType">
+      <soap12:operation soapAction="http://tempuri.org/Scrap_GetReportByMaterialType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportTotalsByMaterialType">
+      <soap12:operation soapAction="http://tempuri.org/Scrap_GetReportTotalsByMaterialType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportByMaterialGroup">
+      <soap12:operation soapAction="http://tempuri.org/Scrap_GetReportByMaterialGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_AdjustGetReportByMaterialGroup">
+      <soap12:operation soapAction="http://tempuri.org/Scrap_AdjustGetReportByMaterialGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_AdjustGetReportTotals">
+      <soap12:operation soapAction="http://tempuri.org/Scrap_AdjustGetReportTotals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Scrap_GetReportTotals">
+      <soap12:operation soapAction="http://tempuri.org/Scrap_GetReportTotals" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNToAdjustByRecount">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PNToAdjustByRecount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_NoAdjusWhenRequired">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_NoAdjusWhenRequired" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNCustomerToAdjuts">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PNCustomerToAdjuts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PNToCount">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PNToCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_ListDistribution">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_Mails_ListDistribution" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_GetHeader">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_Mails_GetHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_Mails_GetFooter">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_Mails_GetFooter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetRecountPeriod">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_GetRecountPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetAnalysisPeriod">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_GetAnalysisPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_GetAdjustedPeriod">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_GetAdjustedPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_UpdateTotalPeriod">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_UpdateTotalPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CycleCount_PeriodsNotifications_UpdateStatusPNPeriod">
+      <soap12:operation soapAction="http://tempuri.org/CycleCount_PeriodsNotifications_UpdateStatusPNPeriod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationMPN_GetMailList">
+      <soap12:operation soapAction="http://tempuri.org/ValidationMPN_GetMailList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidationMPN_GetReportGrnNoValidated">
+      <soap12:operation soapAction="http://tempuri.org/ValidationMPN_GetReportGrnNoValidated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsReportMovements">
+    <wsdl:port name="wsReportMovementsSoap" binding="tns:wsReportMovementsSoap">
+      <soap:address location="http://mxchim0webstg02/wsReportMovementsHana/wsReportMovements.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsReportMovementsSoap12" binding="tns:wsReportMovementsSoap12">
+      <soap12:address location="http://mxchim0webstg02/wsReportMovementsHana/wsReportMovements.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

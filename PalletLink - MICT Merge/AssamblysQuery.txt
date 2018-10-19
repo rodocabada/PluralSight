@@ -1,0 +1,17 @@
+SELECT    top 10 l.SerialNumber, b.Number, b.Revision,  b.Assembly,
+           a.Wip_ID, a.Assembly_ID,
+           b.Customer_ID, a.BatchID_ID
+FROM         dbo.WP_AssemblyRouteWip a INNER JOIN
+                      dbo.CR_Assemblies b ON a.Assembly_ID = b.Assembly_ID INNER JOIN
+                      dbo.CR_MARoutes g ON a.FactoryMARoute_ID = g.FactoryMARoute_ID INNER JOIN
+                      dbo.CR_FactoryMAs f ON g.FactoryMA_ID = f.FactoryMA_ID INNER JOIN
+                      dbo.CR_Factories h ON f.Factory_ID = h.Factory_ID INNER JOIN
+                      dbo.CR_Text i ON h.Factory = i.Text_ID INNER JOIN
+                      dbo.CR_ManufacturingAreas k ON f.ManufacturingArea_ID = k.ManufacturingArea_ID INNER JOIN
+                      dbo.CR_Text j ON k.ManufacturingArea = j.Text_ID AND i.Language_ID = j.Language_ID INNER JOIN
+                      dbo.CR_Routes c ON g.Route_ID = c.Route_ID INNER JOIN
+                      dbo.CR_Text e ON c.Route = e.Text_ID AND i.Language_ID = e.Language_ID INNER JOIN
+                      dbo.WP_Wip l ON a.Wip_ID = l.Wip_ID
+              Where a.LastUpdated = (Select Max(z.LastUpdated) from WP_AssemblyRouteWIP z
+              Where z.WIP_ID = a.WIP_ID)
+              and b.Number = 'TB85211-00-A-TH' and b.revision = 'J'

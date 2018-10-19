@@ -1,0 +1,45 @@
+TaskFlow que sigue el Pallet Link
+	1.-Revisa si el Pallet existe en Tooling Management (Esta comentado, no se hace dicha validacion)
+	2.-Se obtiene el timeout del pallet por customer pero la tabla esta vacia por lo cual siempre esta regresando un true.
+	3.-Se revisan los ciclos de lavado (Para esto ya se tiene que montar la bd en staging porque se debe configurar la opcion para ver si se valida o no)
+	
+	
+----------------------------------------------------------------------------------------------------------------------------------------
+Funcionalidad que va a quedar del lado del MICT
+	1.-Validar si la tablilla ya fue escaneada, esto porque la lista de tablillas escaneadas se va almacenando del lado del MICT.
+
+----------------------------------------------------------------------------------------------------------------------------------------	
+Tablas nuevas que se insertaron en MaterialHandShake
+	1.-CT_Validations
+	2.-CT_Configurations
+	3.-SY_PalletLinkingLog
+	
+Store procedures nuevos en MaterialHanshake
+	1.-up_GetAvailableValidations
+	2.-up_GetConfigurationByDescription
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Objetos de BD a migrar de Pallet Link a MICT (Se empezo a checar desde la implementación de PCBController)
+Tablas
+	1.-CT_Tooling
+	2.-CT_AssembliesPalletLink
+	3.-SY_PalletLinkingLog
+	4.-
+	
+Store Procedures
+	1.-up_GetLocallyAssemblyByCustomerPalletLink
+	2.-up_AddLinkingLog
+	
+----------------------------------------------------------------------------------------------------------------------------------------	
+{
+  "palletSerial": "PTWS00035PBJD004",
+  "customerID": 41
+}
+
+{
+  "pcbSerial": "PTWS00035PBJD004",
+  "customerID": 41,
+  "palletID": 3539,
+  "palletSerial": "PTWS00035PBJD004",
+  "autoBreakPanel": 1
+}

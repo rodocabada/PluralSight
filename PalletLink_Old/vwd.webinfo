@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<VisualWebDeveloper>
+
+    <!-- 
+  Visual Studio global web project settings.
+    -->
+
+
+  <Globals>
+    <UserProperties UseAjaxifiedTemplates="False" UseJQuerySupport="False"/>
+  </Globals>
+  <iisExpressSettings windowsAuthentication="disabled" anonymousAuthentication="enabled" useClassicPipelineMode="false"/>
+</VisualWebDeveloper>

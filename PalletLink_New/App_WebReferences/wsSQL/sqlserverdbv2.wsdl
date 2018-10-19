@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WEB Service para conexion a Bases de Datos de MS SQL Server (Version 2.0.0)</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="dsSQLQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQLServer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLDatabase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dsSQLQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsSQLQueryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dtSQLQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQLServer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLDatabase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dtSQLQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtSQLQueryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strSQLNonQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQLServer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLDatabase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strSQLNonQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQLNonQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strSQLScalar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQLServer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLDatabase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SQLString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="strSQLScalarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSQLScalarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="dsSQLQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:dsSQLQuery" />
+  </wsdl:message>
+  <wsdl:message name="dsSQLQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:dsSQLQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="dtSQLQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:dtSQLQuery" />
+  </wsdl:message>
+  <wsdl:message name="dtSQLQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:dtSQLQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="strSQLNonQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:strSQLNonQuery" />
+  </wsdl:message>
+  <wsdl:message name="strSQLNonQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:strSQLNonQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="strSQLScalarSoapIn">
+    <wsdl:part name="parameters" element="tns:strSQLScalar" />
+  </wsdl:message>
+  <wsdl:message name="strSQLScalarSoapOut">
+    <wsdl:part name="parameters" element="tns:strSQLScalarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SQLServerDBv2Soap">
+    <wsdl:operation name="dsSQLQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa en un DataSet una consulta a una base de datos de MS SQL Server.</wsdl:documentation>
+      <wsdl:input message="tns:dsSQLQuerySoapIn" />
+      <wsdl:output message="tns:dsSQLQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="dtSQLQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Regresa en un DataTable una consulta a una base de datos de MS SQL Server.</wsdl:documentation>
+      <wsdl:input message="tns:dtSQLQuerySoapIn" />
+      <wsdl:output message="tns:dtSQLQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="strSQLNonQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Escribe, borra y actualiza informacion a una base de datos de MS SQL Server. El resultado de la operación se regresa en una string.</wsdl:documentation>
+      <wsdl:input message="tns:strSQLNonQuerySoapIn" />
+      <wsdl:output message="tns:strSQLNonQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="strSQLScalar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Ejecuta un QUERY a una base de datos de MS SQL Server y regresa el resultado en forma escalar. El resultado de la operación se regresa en una string.</wsdl:documentation>
+      <wsdl:input message="tns:strSQLScalarSoapIn" />
+      <wsdl:output message="tns:strSQLScalarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SQLServerDBv2Soap" type="tns:SQLServerDBv2Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dsSQLQuery">
+      <soap:operation soapAction="http://tempuri.org/dsSQLQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dtSQLQuery">
+      <soap:operation soapAction="http://tempuri.org/dtSQLQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strSQLNonQuery">
+      <soap:operation soapAction="http://tempuri.org/strSQLNonQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strSQLScalar">
+      <soap:operation soapAction="http://tempuri.org/strSQLScalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SQLServerDBv2Soap12" type="tns:SQLServerDBv2Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dsSQLQuery">
+      <soap12:operation soapAction="http://tempuri.org/dsSQLQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="dtSQLQuery">
+      <soap12:operation soapAction="http://tempuri.org/dtSQLQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strSQLNonQuery">
+      <soap12:operation soapAction="http://tempuri.org/strSQLNonQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="strSQLScalar">
+      <soap12:operation soapAction="http://tempuri.org/strSQLScalar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SQLServerDBv2">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">WEB Service para conexion a Bases de Datos de MS SQL Server (Version 2.0.0)</wsdl:documentation>
+    <wsdl:port name="SQLServerDBv2Soap" binding="tns:SQLServerDBv2Soap">
+      <soap:address location="http://mxchim0webte11/wssqlserverDB/sqlserverdbv2.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SQLServerDBv2Soap12" binding="tns:SQLServerDBv2Soap12">
+      <soap12:address location="http://mxchim0webte11/wssqlserverDB/sqlserverdbv2.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

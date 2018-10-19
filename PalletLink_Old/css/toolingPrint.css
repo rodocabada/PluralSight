@@ -1,0 +1,20 @@
+﻿@media print
+{
+    body
+    {
+        -webkit-print-color-adjust: exact;
+    }
+    #btnSave
+    {
+        display: none;
+    }
+    #tblMain tr:nth-child(odd), #secondTable tr:nth-child(odd), #Table1 tr:nth-child(odd)
+    {
+        background: #CCC;
+    }
+    #folio
+    {
+        background: Black;
+        color: White;
+    }
+}
